@@ -1,11 +1,22 @@
+import './App.scss';
 import React from 'react';
 import HeaderToolbar from './components/HeaderToolbar/HeaderToolbar';
-import './App.scss';
+import ShoppingCartPreview from './components/ShoppingCartPreview/ShoppingCartPreview';
 
 function App() {
+
+  const proceedToCheckout = () => {
+    console.log('proceeding to checkout');
+  }
+
   return (
     <div className="App">
-      <HeaderToolbar />
+      <div className="HeaderToolbar">
+        <HeaderToolbar />
+      </div>
+      <div className="body">
+        <ShoppingCartPreview proceedToCheckout={proceedToCheckout}/>
+      </div>
     </div>
   );
 }
