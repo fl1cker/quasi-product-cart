@@ -7,9 +7,14 @@
     position: sticky;
     background-color: lightcoral;
     min-height: 75px;
-    align-content: center;
+    justify-content: flex-end;
 }
 
 .shopping-cart {
-    align-self: flex-end;
+    align-self: center;
+    margin-right: 2rem;
+}
+
+.shopping-cart > i {
+    font-size: 2.5rem;
 }
