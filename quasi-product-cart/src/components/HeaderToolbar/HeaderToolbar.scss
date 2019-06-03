@@ -1,0 +1,15 @@
+.header-toolbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    left: 0;
+    top: 0;
+    position: sticky;
+    background-color: lightcoral;
+    min-height: 75px;
+    align-content: center;
+}
+
+.shopping-cart {
+    align-self: flex-end;
+}
