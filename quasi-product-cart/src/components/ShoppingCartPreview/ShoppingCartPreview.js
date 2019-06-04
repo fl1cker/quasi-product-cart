@@ -2,9 +2,6 @@ import React from 'react';
 import './ShoppingCartPreview.scss';
 
 const ShoppingCartPreview = (props) => {
-
-
-
     return (
         <div className="preview-panel">
             <div>Total Cost</div>
