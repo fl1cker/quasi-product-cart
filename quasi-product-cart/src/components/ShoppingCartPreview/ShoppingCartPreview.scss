@@ -8,11 +8,12 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    margin: auto;
 }
 
 .preview-panel > * {
     align-self: center;
-    border: 1px dotted red;
+    // border: 1px dotted red;
 }
 
 .cost-section,
@@ -22,7 +23,7 @@
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    width: 85%;
+    width: 100%;
 }
 
 .bold-text {
@@ -37,7 +38,7 @@
     flex: 0 1 56%;
     max-height: 56%;
     overflow-y: auto;
-    width: 95%;
+    width: 100%;
 }
 
 .CartItem {
