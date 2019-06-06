@@ -2,9 +2,12 @@ import './App.scss';
 import React from 'react';
 import HeaderToolbar from './components/HeaderToolbar/HeaderToolbar';
 import ShoppingCartPreview from './components/ShoppingCartPreview/ShoppingCartPreview';
-
+import ShoppingCartService from './classes/shopping-cart-service';
 function App() {
 
+  const shoppingService = ShoppingCartService();
+  shoppingService.initializeMockCart();
+  
   const proceedToCheckout = () => {
     console.log('proceeding to checkout');
   }
@@ -15,7 +18,7 @@ function App() {
         <HeaderToolbar />
       </div>
       <div className="body">
-        <ShoppingCartPreview proceedToCheckout={proceedToCheckout}/>
+        <ShoppingCartPreview proceedToCheckout={proceedToCheckout} shoppingCartList={shoppingService.shoppingCartList}/>
       </div>
     </div>
   );

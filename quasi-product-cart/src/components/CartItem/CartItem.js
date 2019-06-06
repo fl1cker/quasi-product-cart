@@ -4,17 +4,17 @@ import './CartItem.scss';
 const CartItem = ({ item }) => {
     return (
         <div className="CartItem">
-            <div className="image">
-                {item.image}
+            <div className="image-container">
+                <img className="image" src={item.imageUrl} title={item.name} alt={item.name} />
             </div>
             <div className="details">
                 <div className="price">
                     ${item.cost.toFixed(2)}
                 </div>
                 <div className="name">
-                    {item.name + ' ' + item.description}
+                    {item.name}
                 </div>
-                <div className="details">
+                <div className="specs">
                     qty: {item.quantity} | {item.details.join(" | ")}
                 </div>
             </div>
