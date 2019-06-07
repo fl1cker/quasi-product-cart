@@ -1,22 +1,22 @@
 import React from 'react';
 import './CartItem.scss';
 
-const CartItem = ({ item }) => {
+const CartItem = (props) => {
     return (
         <div className="CartItem">
-            <div className="close-button">x</div>
+            <div className="close-button" onClick={() => {props.removeItemFromCart(props.index)}}>x</div>
             <div className="image-container">
-                <img className="image" src={item.imageUrl} title={item.name} alt={item.name} />
+                <img className="image" src={props.item.imageUrl} title={props.item.name} alt={props.item.name} />
             </div>
             <div className="details">
                 <div className="section price">
-                    ${item.cost.toFixed(2)}
+                    ${props.item.cost.toFixed(2)}
                 </div>
                 <div className="section name">
-                    {item.name}
+                    {props.item.name}
                 </div>
                 <div className="section specs">
-                    <span className="quantity">{item.quantity}</span><span>qty | {item.details.join(" | ")}</span> 
+                    <span className="quantity">{props.item.quantity}</span><span>qty | {props.item.details.join(" | ")}</span> 
                 </div>
             </div>
             
