@@ -1,15 +1,17 @@
 .CartItem {
     width: 80%;
     height: 100%;
-    display: flex;
-    flex-direction: row;
     border: 1px solid black;
     margin: auto;
+    position: relative;
+    overflow: auto;
 }
 
 .image-container {
-    flex-basis: 30%;
-    height: 100%;
+    float: left;
+    width: 30%;
+    height: 75%;
+    padding: 10px;
 }
 
 .image {
@@ -19,21 +21,30 @@
     width: 100%;
 }
 
-.details {
-    flex-basis: 65%;
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.close-button {
+    position: absolute;
+    top: -2px;
+    right: 3px;
 }
 
-.close-button {
-    flex-basis: 5%;
-    align-self: flex-start;
+.section {
+    margin: 5.5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .price,
-.name,
-.specs {
-    padding-left: 10px;
-    flex-basis: 100%;
+.quantity {
+    font-weight: bold;
+}
+
+.quantity {
+    margin-right: 3px;
+}
+
+.specs > *:not(.quantity) {
+    font-size: .8rem;
+    font-weight: 300;
+    color: rgb(50,50,50)
 }
