@@ -2,44 +2,14 @@ const ShoppingCartService = () => {
     const shoppingCartList = [];
     const appliedDiscounts = [];
 
-    const initializeMockCart = () => {
-        const sampleItems = [{
-            id: 0,
-            imageUrl: 'images/products/just-shapes-and-beats.jfif',
-            cost: 8.00,
-            name: 'Just Shapes and Beats',
-            description: 'Beserk Studios',
-            details: ["digital"],
-            quantity: 1,
-        },
-        {
-            id: 1,
-            imageUrl: 'images/products/breath-of-the-wild.jpg',
-            cost: 60.00,
-            name: 'Breath Of The Wild',
-            description: 'Nintendo',
-            details: ["physical", "Spec. Ed."],
-            quantity: 2,
-        },
-        {
-            id: 2,
-            imageUrl: 'images/products/halo-reach.png',
-            cost: 8.00,
-            name: 'Halo Reach',
-            description: 'Bungie Studios',
-            details: ["physical"],
-            quantity: 1,
-        },];
-
-        sampleItems.forEach(item => addItemToCart(item));
-    }
-
     const addItemToCart = (item) => {
         shoppingCartList.push(item);
     }
 
     const removeItemFromCart = (itemIndex) => {
+        console.log('shoppingCartList = ', shoppingCartList);
         shoppingCartList.splice(itemIndex, 1);
+        console.log('shoppingCartList = ', shoppingCartList);
     }
 
     const calculateCartPreviewTotal = () => {
@@ -77,7 +47,6 @@ const ShoppingCartService = () => {
         calculateCartFinalTotal,
         calculateShipping,
         calculateDiscounts,
-        initializeMockCart,
     }
 } 
     
