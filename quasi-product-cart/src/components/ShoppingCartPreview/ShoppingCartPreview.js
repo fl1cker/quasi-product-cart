@@ -16,7 +16,7 @@ const ShoppingCartPreview = (props) => {
     const returnShoppingList = (shoppingCartList) => {
 
         return shoppingCartList.length > 0 
-            ? shoppingCartList.map((item, index) => <CartItem key={item.id} className="CartItem" item={item} index={index} removeItemFromCart={props.removeItemFromCart} />)
+            ? shoppingCartList.map((item, index) => <CartItem key={item.id} className="CartItem" item={item} index={index} />)
             : <div>Girl, you need to start shopping!!!!!</div>
     }
 
