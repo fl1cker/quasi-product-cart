@@ -25,6 +25,24 @@ function mockShoppingCartList() {
         description: 'Bungie Studios',
         details: ["physical"],
         quantity: 1,
+      },
+      {
+        id: 10,
+        imageUrl: 'images/products/just-shapes-and-beats.jfif',
+        cost: 8.00,
+        name: 'zzJust Shapes and Beats',
+        description: 'Beserk Studios',
+        details: ["digital"],
+        quantity: 1,
+      },
+      {
+        id: 11,
+        imageUrl: 'images/products/breath-of-the-wild.jpg',
+        cost: 60.00,
+        name: 'zzBreath Of The Wild',
+        description: 'Nintendo',
+        details: ["physical", "Spec. Ed."],
+        quantity: 2,
       },];
 }
 
@@ -32,9 +50,14 @@ function calculateCartTotal (shoppingCartList) {
         return shoppingCartList.reduce((a, b) => a + (b.cost * b.quantity), 0).toFixed(2);
 }
 
+function isShoppingCartPopulated(shoppingCartList) {
+    return shoppingCartList.length > 0;
+}
+
 const initialState = {
     shoppingCartList: [].concat(mockShoppingCartList()),
-    calculateCartTotal: calculateCartTotal
+    calculateCartTotal: calculateCartTotal,
+    isShoppingCartPopulated: isShoppingCartPopulated,
 }
 
 const cartManager = (state = initialState, action) => {
