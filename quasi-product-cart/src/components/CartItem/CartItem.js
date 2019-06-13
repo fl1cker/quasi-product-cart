@@ -1,5 +1,6 @@
 import React from 'react';
 import './CartItem.scss';
+import { connect } from 'react-redux';
 
 const CartItem = (props) => {
     return (
@@ -19,9 +20,14 @@ const CartItem = (props) => {
                     <span className="quantity">{props.item.quantity}</span><span>qty | {props.item.details.join(" | ")}</span> 
                 </div>
             </div>
-            
         </div>
     );
 }
 
-export default CartItem;
+function mapDispatchToProps(dispatch) {
+    return {
+        removeItemFromCart: (index) => dispatch({type: 'REMOVE_ITEM', index: index}, )
+    }
+}
+
+export default connect(null, mapDispatchToProps)(CartItem);

@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-
-import './index.scss';
 //import 'bootstrap/dist/css/boostrap.min.css';
-import $ from 'jquery';
-import Popper from 'popper.js';
+//import $ from 'jquery';
+//import Popper from 'popper.js';
 
 import App from './App';
-import { shoppingCartList } from 'src/classes/ShoppingCartService';
+import store from './redux/store';
 
+import './index.scss';
 
-ReactDOM.render(<App shoppingCartList={shoppingCartList}/>, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
