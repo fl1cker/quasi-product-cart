@@ -46,10 +46,13 @@ function mockShoppingCartList() {
       },];
 }
 
+
+//TODO: Find a way to make this function have access to the state without them having to be passed in
 function calculateCartTotal (shoppingCartList) {
         return shoppingCartList.reduce((a, b) => a + (b.cost * b.quantity), 0).toFixed(2);
 }
 
+//TODO: Find a way to make this function have access to the state without them having to be passed in
 function isShoppingCartPopulated(shoppingCartList) {
     return shoppingCartList.length > 0;
 }
