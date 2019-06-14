@@ -1,5 +1,7 @@
+$panel-background-color: rgb(250,250,250);
+
 .preview-panel {
-    background-color: rgb(250,250,250);
+    background-color: $panel-background-color;
     min-width: 30%;
     max-width: 30%;
     max-height: 500px;
@@ -33,13 +35,18 @@
 
 .cost-section {
     border-bottom: 1px solid rgb(200,200,200);
+    box-shadow: 0 25px 25px 2px $panel-background-color;
+    position: relative;
+    z-index: 1;
 }
 
 .item-list {
     flex: 0 1 56%;
     max-height: 56%;
-    overflow-y: auto;
+    overflow-y: overlay;
     width: 100%;
+    z-index: 0;
+    padding: 10px 0;
 }
 
 .CartItem {
@@ -56,5 +63,7 @@
     border-radius: 6px;
     font-size: 1rem;
     font-weight: bold;
+    box-shadow: 0 -6px 16px 10px $panel-background-color;
+    position: relative;
 }
 
