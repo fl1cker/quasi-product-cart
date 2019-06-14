@@ -2,10 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ShoppingCartPopulated from '../ShoppingCartPopulated/ShoppingCartPopulated';
 import ShoppingCartEmpty from '../ShoppingCartEmpty/ShoppingCartEmpty';
+import './ShoppingCartPreview.scss';
 
 const ShoppingCartPreview = (props) => {
     return (
-        <div>
+        <div className="preview-panel">
             {
                 props.isShoppingCartPopulated(props.shoppingCartList)
                     ? <ShoppingCartPopulated />
