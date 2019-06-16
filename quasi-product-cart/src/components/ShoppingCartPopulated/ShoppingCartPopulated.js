@@ -1,6 +1,7 @@
 import React from 'react';
 import CartItem from '../CartItem/CartItem';
 import { connect } from 'react-redux';
+import { calculateCartTotal } from '../../redux/selectors';
 import './ShoppingCartPopulated.scss';
 
 const ShoppingCartPopulated = (props) => {
@@ -12,7 +13,7 @@ const ShoppingCartPopulated = (props) => {
     return (
         <React.Fragment>
             <div className="cost-section">
-                <p><span className="bold-text">cart total:</span> ${props.calculateCartTotal(props.shoppingCartList)}</p>
+                <p><span className="bold-text">cart total:</span> ${props.calculateCartTotal()}</p>
             </div>
             <div className="item-list">
                 {poplateShoppingList(props.shoppingCartList)}
@@ -27,7 +28,7 @@ const ShoppingCartPopulated = (props) => {
 function mapStateToProps(state) {
     return {
         shoppingCartList: state.shoppingCartList,
-        calculateCartTotal: state.calculateCartTotal
+        calculateCartTotal: () => calculateCartTotal(state)
     }
 }
 
