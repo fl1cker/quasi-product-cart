@@ -1,7 +1,26 @@
 .empty-cart-message {
     font-weight: bold;
+    font-size: 150%;
+    flex-basis: 40%;
+    text-align: center;
 }
 
-.shopping-link {
-    margin-top: 0;
+.empty-cart {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 20px;
+}
+
+.shopping-button {
+    margin: auto;
+    background-color: rgba($color: #FF1111, $alpha: 0.8);
+    color: white;
+    flex-basis: 60%;
+    width: 80%;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
 }
