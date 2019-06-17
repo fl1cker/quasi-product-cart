@@ -1,3 +1,5 @@
+@import "~variables.scss";
+
 .cost-section,
 .checkout-section {
     height: 50px;
@@ -14,8 +16,8 @@
 }
 
 .cost-section {
-    border-bottom: 1px solid rgb(200,200,200);
-    box-shadow: 0 25px 25px 2px rgb(250,250,250);
+    border-bottom: 1px solid $cart-border-color;
+    box-shadow: 0 25px 25px 2px $transparent-box-shadow;
     position: relative;
     z-index: 1;
 }
@@ -36,14 +38,14 @@
 
 .submit-button {
     margin: auto;
-    background-color: rgba($color: #FF1111, $alpha: 0.8);
+    background-color: $primary-background-color;
     color: white;
     height: 100%;
     width: 100%;
     border-radius: 6px;
     font-size: 1rem;
     font-weight: bold;
-    box-shadow: 0 -6px 16px 10px rgb(250,250,250);
+    box-shadow: 0 -6px 16px 10px $transparent-box-shadow;
     position: relative;
 }
 

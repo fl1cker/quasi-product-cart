@@ -1,7 +1,9 @@
+@import "~variables.scss";
+
 .CartItem {
     width: 80%;
     height: 100%;
-    border: .5px solid rgb(200,200,200);
+    border: .5px solid $cart-border-color;
     margin: auto;
     position: relative;
     overflow: auto;
@@ -26,7 +28,7 @@
     position: absolute;
     top: -1px;
     right: 6px;
-    color: rgb(50,50,50);
+    color: $alt-text-color;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     font-weight: 100;
     font-size: 1.2rem;
@@ -52,5 +54,5 @@
 .specs > *:not(.quantity) {
     font-size: .8rem;
     font-weight: 300;
-    color: rgb(50,50,50);
+    color: $alt-text-color;
 }
