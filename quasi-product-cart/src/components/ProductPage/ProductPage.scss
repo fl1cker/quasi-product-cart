@@ -1,0 +1,14 @@
+.product-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: yellowgreen;
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+.product-container {
+    width: 250px;
+    height: 250px;
+}

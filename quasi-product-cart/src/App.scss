@@ -1,8 +1,19 @@
+@import '~variables.scss';
+
+$header-height: 75px;
+
 .HeaderToolbar {
-  height: 75px;
+  height: $header-height;
   width: 100%;
+  border-bottom: 2px solid $primary-border-color;
 }
 
-.body {
+.FilterPanel {
+  float: left;
   height: calc(100vh - 75px);
+  width: 250px;
+}
+
+.ProductPage {
+  float: left;
 }
