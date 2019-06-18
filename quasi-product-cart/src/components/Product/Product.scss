@@ -1,0 +1,61 @@
+@import '~variables.scss';
+
+.Product-host {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 10px 15px;
+}
+
+.Product-image-container {
+    flex-basis: 60%;
+    box-sizing: border-box;
+    width: 99%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border-bottom: 1px solid $primary-border-color;
+    padding-bottom: 10px;
+}
+
+.Product-item-container {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Product-image {
+    object-position: 0 0;
+    object-fit: contain;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.Product-add-button {
+    height: 50px;
+    width: 125px;
+}
+
+.Product-add-container {
+    flex: 0 0 20%;
+}
+
+
+
+.Product-item-name {
+    font-size: 1.25rem;
+}
+
+.Product-item-description {
+    font-size: .90rem;
+    color: $alt-text-color;
+}

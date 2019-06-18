@@ -1,3 +1,5 @@
+@import '~variables.scss';
+
 .empty-cart-message {
     font-weight: bold;
     font-size: 150%;
@@ -16,11 +18,6 @@
 
 .shopping-button {
     margin: auto;
-    background-color: rgba($color: #FF1111, $alpha: 0.8);
-    color: white;
     flex-basis: 60%;
     width: 80%;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
 }

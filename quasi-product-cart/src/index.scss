@@ -1,4 +1,4 @@
-// create variables for primary/secondary colors
+@import '~variables.scss';
 
 body {
   margin: 0;
@@ -12,4 +12,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.shopping-button {
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: $primary-background-color;
+}
+
+.bold {
+  font-weight: bold;
 }
