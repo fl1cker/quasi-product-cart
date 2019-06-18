@@ -11,15 +11,17 @@ const App = () => {
       <div className="HeaderToolbar">
         <HeaderToolbar />
       </div>
-      <aside className="FilterPanel">
-        <FilterPanel />
-      </aside>
-      <div className="ProductPage">
-        <ProductPage />
+      <div className="application-body">
+        <div className="FilterPanel">
+          <FilterPanel />
+        </div>
+        <div className="ProductPage">
+          <ProductPage />
+        </div>
       </div>
-      <div className="ShoppingCartPreview">
+      {/* <div className="ShoppingCartPreview">
         <ShoppingCartPreview />
-      </div>
+      </div> */}
     </div>
   );
 }
