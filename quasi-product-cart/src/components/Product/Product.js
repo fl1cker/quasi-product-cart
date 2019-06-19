@@ -13,9 +13,9 @@ const Product = (props) => {
                     <div className="Product-item-description">{props.product.description}</div>
                 </div>
                 <div className="Product-item-details">Details: {props.product.details.join('  |  ')}</div>
-                <div className="Product-item-price">{props.product.price}</div>
+                <div className="Product-item-price">${props.product.cost.toFixed(2)}</div>
                 <div className="Product-add-button-container">
-                    <button className="Product-add-button shopping-button">Add to cart</button>
+                    <button className="Product-add-button shopping-button" onClick={() => props.addItemToCart(props.product)}>Add to cart</button>
                 </div>
             </div>
         </div>

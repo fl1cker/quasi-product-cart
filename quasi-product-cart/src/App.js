@@ -19,9 +19,9 @@ const App = () => {
           <ProductPage />
         </div>
       </div>
-      {/* <div className="ShoppingCartPreview">
+      <div className="ShoppingCartPreview">
         <ShoppingCartPreview />
-      </div> */}
+      </div>
     </div>
   );
 }

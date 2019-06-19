@@ -9,9 +9,9 @@ const listOfProducts = [
         imageUrl: 'images/products/just-shapes-and-beats.jfif',
         cost: 8.00,
         name: 'Just Shapes and Beats',
-        description: 'Beserk Studios',
+        description: 'Berzerk Studios',
         details: ["digital"],
-        quantity: 1,
+        quantity: 0,
     },
     {
         id: 1,
@@ -20,7 +20,7 @@ const listOfProducts = [
         name: 'Breath Of The Wild',
         description: 'Nintendo',
         details: ["physical", "Spec. Ed."],
-        quantity: 2,
+        quantity: 0,
     },
     {
         id: 2,
@@ -29,16 +29,16 @@ const listOfProducts = [
         name: 'Halo Reach',
         description: 'Bungie Studios',
         details: ["physical"],
-        quantity: 1,
+        quantity: 0,
     },
     {
         id: 10,
         imageUrl: 'images/products/just-shapes-and-beats.jfif',
         cost: 8.00,
         name: 'zzJust Shapes and Beats',
-        description: 'Beserk Studios',
+        description: 'Berzerk Studios',
         details: ["digital"],
-        quantity: 1,
+        quantity: 0,
     },
     {
         id: 11,
@@ -47,7 +47,7 @@ const listOfProducts = [
         name: 'zzBreath Of The Wild',
         description: 'Nintendo',
         details: ["physical", "Spec. Ed."],
-        quantity: 2,
+        quantity: 0,
     }
 ]
 
@@ -55,7 +55,7 @@ const ProductPage = (props) => {
 
     function generateProductList() {
         return listOfProducts.map(product => {
-            return <div key={product.id} className="product-container"><Product product={product} onClick={() => props.addItemToCart(product)} /></div>
+            return <div key={product.id} className="product-container"><Product product={product} addItemToCart={props.addItemToCart} /></div>
         })
     }
 
