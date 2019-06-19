@@ -12,7 +12,7 @@
 }
 
 .Product-image-container {
-    flex-basis: 60%;
+    flex-basis: 56%;
     box-sizing: border-box;
     width: 99%;
     margin: 0 auto;
@@ -21,10 +21,11 @@
     flex-wrap: nowrap;
     justify-content: center;
     border-bottom: 1px solid $primary-border-color;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .Product-item-container {
+    padding-top: 3px;
     flex-basis: 40%;
     display: flex;
     flex-direction: column;
