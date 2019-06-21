@@ -1,9 +1,11 @@
 const initialState = {
     shoppingCartList: [],
+    iconHover: false,
+    shoppingCartHover: false,
 }
 
 const cartManager = (state = initialState, action) => {
-    console.log('received action: ', action);
+    console.log(action);
     switch (action.type) {
         case 'ADD_ITEM':
             const newShoppingCartList = addOrUpdateCart(state.shoppingCartList, action.data);
@@ -18,6 +20,16 @@ const cartManager = (state = initialState, action) => {
                 ...state,
                 shoppingCartList: newList
             }
+        case 'SET_ICON_HOVER':
+            return {
+                ...state,
+                iconHover: action.data,
+            }
+        case 'SET_SHOPPING_CART_HOVER':
+            return {
+                ...state,
+                shoppingCartHover: action.data,
+            }
 
         default: return state;
     }
@@ -31,8 +43,6 @@ function addOrUpdateCart(shoppingList, product) {
     } else {
         newShoppingList.push({...product, quantity: 1});
     }
-    console.log('old: ', shoppingList);
-    console.log('new: ', newShoppingList);
     return newShoppingList;
 }
 

@@ -7,13 +7,15 @@ import { isShoppingCartPopulated } from '../../redux/selectors';
 import './ShoppingCartPreview.scss';
 
 const ShoppingCartPreview = (props) => {
+    const render = () => {
+        return props.isShoppingCartPopulated()
+            ? <ShoppingCartPopulated />
+            : <ShoppingCartEmpty />
+    }
+
     return (
-        <div className="preview-panel">
-            {
-                props.isShoppingCartPopulated()
-                    ? <ShoppingCartPopulated />
-                    : <ShoppingCartEmpty />
-            }
+        <div className="preview-panel" onMouseEnter={props.setShowShoppingCart} onMouseLeave={props.setHideShoppingCart}>
+            {render()}
         </div>
     )
 }
@@ -21,8 +23,15 @@ const ShoppingCartPreview = (props) => {
 function mapStateToProps(state) {
     return {
         shoppingCartList: state.shoppingCartList,
-        isShoppingCartPopulated: () => isShoppingCartPopulated(state)
+        isShoppingCartPopulated: () => isShoppingCartPopulated(state),
     };
 }
 
-export default connect(mapStateToProps)(ShoppingCartPreview);
+function mapDispatchToProps(dispatch) {
+    return {
+        setShowShoppingCart: () => dispatch({ type: 'SET_SHOPPING_CART_HOVER', data: true }),
+        setHideShoppingCart: () => dispatch({ type: 'SET_SHOPPING_CART_HOVER', data: false }),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCartPreview);

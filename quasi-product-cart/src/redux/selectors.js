@@ -7,3 +7,7 @@ export function calculateCartTotal (state) {
   export function isShoppingCartPopulated(state) {
     return state.shoppingCartList.length > 0;
   }
+
+  export function showShoppingCart(state) {
+    return state.iconHover || state.shoppingCartHover;
+  }
