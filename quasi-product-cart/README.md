@@ -1,5 +1,10 @@
 ##To Do
 How to add Bootstrap: https://facebook.github.io/create-react-app/docs/adding-bootstrap
+Fix UI for empty cart.  Shopping Button Too Big.
+Consider making the shopping cart appear after a half second delay.  Its spastic if the mouse barely glances it.
+Complete Overlay.
+Separate state between cart display and cart management (use combineReducers).
+Migrate product list and cart state to Express.js.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
