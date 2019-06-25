@@ -10,7 +10,7 @@ const HeaderToolbar = (props) => {
             if(!shouldShowShoppingCart) {
                 props.showShoppingCart();
             }
-        }, 250)
+        }, 150)
     }
 
     const hideShoppingCart = () => {

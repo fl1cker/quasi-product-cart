@@ -15,7 +15,7 @@ const listOfProducts = [
     },
     {
         id: 1,
-        imageUrl: 'images/products/breath-of-the-wild.jpg',
+        imageUrl: 'images/products/breath-of-the-wild-game.webp',
         cost: 60.00,
         name: 'Breath Of The Wild',
         description: 'Nintendo',
@@ -24,16 +24,16 @@ const listOfProducts = [
     },
     {
         id: 2,
-        imageUrl: 'images/products/halo-reach.png',
+        imageUrl: 'images/products/halo-5.jfif',
         cost: 45.00,
-        name: 'Halo Reach',
-        description: 'Bungie Studios',
+        name: 'Halo 5',
+        description: '343 Studios',
         details: ["physical"],
         quantity: 0,
     },
     {
         id: 10,
-        imageUrl: '',
+        imageUrl: 'images/products/mad-catz.jfif',
         cost: 24.99,
         name: 'Wired Xbox One Controller',
         description: 'Mad Catz',
@@ -42,7 +42,7 @@ const listOfProducts = [
     },
     {
         id: 11,
-        imageUrl: '',
+        imageUrl: 'images/products/xbox-one-wireless-controller.jfif',
         cost: 60.00,
         name: 'Wireless Xbox One Controller',
         description: 'Microsoft',
@@ -51,11 +51,11 @@ const listOfProducts = [
     },
     {
     id: 13,
-        imageUrl: '',
+        imageUrl: 'images/products/switch-controllers-green-pink.jfif',
         cost: 76.49,
-        name: 'Wii Nunchuck',
+        name: 'Switch Joy-Cons',
         description: 'Nintendo',
-        details: ['Color: Neon Red/Neon Yellow'],
+        details: ['Color: Neon Green/Neon Pink'],
         quantity: 0,
     }
 ]
