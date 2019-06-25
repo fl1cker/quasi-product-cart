@@ -15,6 +15,7 @@
 .shopping-cart {
     align-self: center;
     margin-right: 2rem;
+    height: 100%;
 }
 
 .shopping-cart > i {
@@ -22,7 +23,6 @@
 }
 
 .shopping-cart-svg {
-    height: auto;
-    width: 75px;
-    background-color: white;
+    height: 100%;
+    width: auto;
 }
