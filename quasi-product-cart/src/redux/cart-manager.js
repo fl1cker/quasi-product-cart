@@ -38,7 +38,7 @@ const cartManager = (state = initialState, action) => {
 function addOrUpdateCart(shoppingList, product) {
     const newShoppingList = Object.assign([], shoppingList);
     const index = newShoppingList.map(x => x.id).indexOf(product.id);
-    if(index > 0) {
+    if(index >= 0) {
         newShoppingList[index].quantity += 1;
     } else {
         newShoppingList.push({...product, quantity: 1});

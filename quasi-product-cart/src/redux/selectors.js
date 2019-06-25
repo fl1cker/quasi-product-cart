@@ -10,4 +10,4 @@ export function calculateCartTotal (state) {
 
   export function showShoppingCart(state) {
     return state.iconHover || state.shoppingCartHover;
-  }
+ }

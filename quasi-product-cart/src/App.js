@@ -11,9 +11,9 @@ const App = (props) => {
   const renderShoppingCart = () => {
     if (props.showShoppingCart()) {
       return (
-        <div className="ShoppingCartPreview">
-          <ShoppingCartPreview />
-        </div>
+          <div className="ShoppingCartPreview">
+            <ShoppingCartPreview />
+          </div>
       )
     }
     return <div />
