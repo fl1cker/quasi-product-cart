@@ -12,7 +12,9 @@ $filter-panel-width: 225px;
 .HeaderToolbar {
   height: $header-height;
   width: 100%;
-  border-bottom: 2px solid $primary-border-color;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .FilterPanel {

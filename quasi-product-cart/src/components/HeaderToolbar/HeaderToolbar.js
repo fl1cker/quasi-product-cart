@@ -7,7 +7,7 @@ const HeaderToolbar = (props) => {
     const showShoppingCartOnDelay = () => {
         shouldShowShoppingCart = false;
         setTimeout(() => {
-            if(!shouldShowShoppingCart) {
+            if (!shouldShowShoppingCart) {
                 props.showShoppingCart();
             }
         }, 150)
@@ -17,14 +17,12 @@ const HeaderToolbar = (props) => {
         shouldShowShoppingCart = true;
         props.hideShoppingCart();
     }
-    
 
     return (
         <div className="header-toolbar">
+            <div className="header-title">Puerile</div>
             <div className="shopping-cart">
-                {/* <i className="material-icons" onMouseEnter={props.showShoppingCart} onMouseOut={props.hideShoppingCart}>shopping_cart</i> */}
                 <img src="images/icons/shopping-cart.svg" alt="shopping cart icon" className="shopping-cart-svg" onMouseEnter={() => showShoppingCartOnDelay()} onMouseOut={() => hideShoppingCart()}></img>
-                
             </div>
         </div>
     );
@@ -32,8 +30,8 @@ const HeaderToolbar = (props) => {
 
 function mapDispatchToProps(dispatch) {
     return {
-        showShoppingCart: () => dispatch({type: 'SET_ICON_HOVER', data: true}),
-        hideShoppingCart: () => dispatch({type: 'SET_ICON_HOVER', data: false}),
+        showShoppingCart: () => dispatch({ type: 'SET_ICON_HOVER', data: true }),
+        hideShoppingCart: () => dispatch({ type: 'SET_ICON_HOVER', data: false }),
     }
 }
 
