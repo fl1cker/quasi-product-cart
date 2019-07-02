@@ -20,7 +20,9 @@ const HeaderToolbar = (props) => {
 
     return (
         <div className="HeaderToolbar">
-            <div className="HeaderToolbar-title">Puerile</div>
+            <div className="HeaderToolbar-title">
+                <img src="images/logo/puerile-logo.svg" alt="puerile logo" className="HeaderToolbar-logo-svg"></img>
+            </div>
             <div className="HeaderToolbar-shopping-cart">
                 <img src="images/icons/shopping-cart.svg" alt="shopping cart icon" className="HeaderToolbar-shopping-cart-svg" onMouseEnter={() => showShoppingCartOnDelay()} onMouseOut={() => hideShoppingCart()}></img>
             </div>

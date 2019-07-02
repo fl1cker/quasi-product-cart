@@ -18,7 +18,8 @@
     padding-right: 10px;
 }
 
-.HeaderToolbar-shopping-cart-svg {
+.HeaderToolbar-shopping-cart-svg,
+.HeaderToolbar-logo-svg {
     height: 100%;
     width: auto;
 }
@@ -29,6 +30,6 @@
     text-align: center;
     font-size: 40px;
     align-self: center;
-    border: 2.5px dashed $alternate-background-color;
+    border: 2.5px solid $alternate-background-color;
     height: 93%;
 }
