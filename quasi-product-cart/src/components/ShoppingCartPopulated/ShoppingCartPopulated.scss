@@ -1,7 +1,7 @@
 @import "~variables.scss";
 
-.cost-section,
-.checkout-section {
+.ShoppingCartPopulated-cost-section,
+.ShoppingCartPopulated-checkout-section {
     height: 50px;
     display: flex;
     flex-direction: row;
@@ -11,18 +11,14 @@
     margin-bottom: 10px;
 }
 
-.bold-text {
-    font-weight: bold;
-}
-
-.cost-section {
+.ShoppingCartPopulated-cost-section {
     border-bottom: 1px solid $primary-border-color;
     box-shadow: 0 25px 25px 2px $transparent-box-shadow;
     position: relative;
     z-index: 1;
 }
 
-.item-list {
+.ShoppingCartPopulated-item-list {
     flex: 0 1 56%;
     max-height: 56%;
     overflow-y: overlay;
@@ -31,12 +27,12 @@
     padding: 10px 0;
 }
 
-.CartItem {
+.ShoppingCartPopulated-CartItem {
     height: 88px;
     margin-bottom: 2%;
 }
 
-.submit-button {
+.ShoppingCartPopulated-submit-button {
     margin: 0 auto;
     background-color: $primary-background-color;
     color: white;

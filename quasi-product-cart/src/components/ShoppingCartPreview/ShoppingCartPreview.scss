@@ -1,4 +1,4 @@
-.preview-panel {
+.ShoppingCartPreview {
     background-color: rgb(250,250,250);
     min-width: 300px;
     max-width: 300px;
@@ -13,7 +13,6 @@
     z-index: 100;
 }
 
-.preview-panel > * {
+.ShoppingCartPreview > * {
     align-self: center;
-    // border: 1px dotted red;
 }

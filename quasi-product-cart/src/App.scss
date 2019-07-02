@@ -9,7 +9,7 @@ $filter-panel-width: 225px;
   overflow-x: hidden;
 }
 
-.HeaderToolbar {
+.App-HeaderToolbar-container {
   height: $header-height;
   width: 100%;
   position: sticky;
@@ -17,25 +17,25 @@ $filter-panel-width: 225px;
   left: 0;
 }
 
-.FilterPanel {
+.App-FilterPanel-container {
   min-width: $filter-panel-width;
   max-width: $filter-panel-width;
 }
 
 
-.ShoppingCartPreview {
+.App-ShoppingCartPreview-container {
   position: absolute;
   top: calc(#{$header-height}/1.5);
   right: 25px;
 }
 
-.ProductPage {
+.App-ProductPage-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.application-body {
+.App-body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

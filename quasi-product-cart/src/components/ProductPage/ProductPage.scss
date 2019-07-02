@@ -1,4 +1,4 @@
-.product-body {
+.ProductPage {
     height: 100%;
     width: 100%;
     display: flex;
@@ -7,7 +7,7 @@
     align-content: flex-start;
 }
 
-.product-container {
+.ProductPage-product-container {
     min-width: 325px;
     max-width: 325px;
     height: 400px;

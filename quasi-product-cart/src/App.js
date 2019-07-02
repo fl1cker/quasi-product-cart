@@ -11,7 +11,7 @@ const App = (props) => {
   const renderShoppingCart = () => {
     if (props.showShoppingCart()) {
       return (
-          <div className="ShoppingCartPreview">
+          <div className="App-ShoppingCartPreview-container">
             <ShoppingCartPreview />
           </div>
       )
@@ -21,14 +21,14 @@ const App = (props) => {
 
   return (
     <div className="App">
-      <div className="HeaderToolbar">
+      <div className="App-HeaderToolbar-container">
         <HeaderToolbar />
       </div>
-      <div className="application-body">
-        <div className="FilterPanel">
+      <div className="App-body">
+        <div className="App-FilterPanel-container">
           <FilterPanel />
         </div>
-        <div className="ProductPage">
+        <div className="App-ProductPage-container">
           <ProductPage />
         </div>
       </div>

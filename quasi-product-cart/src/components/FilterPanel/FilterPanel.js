@@ -3,7 +3,7 @@ import './FilterPanel.scss'
 
 const FilterPanel = () => {
     return (
-        <div className="filter-panel-body"></div>
+        <div className="FilterPanel"></div>
     )
 }
 

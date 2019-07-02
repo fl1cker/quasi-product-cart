@@ -1,6 +1,6 @@
 @import "~variables.scss";
 
-.header-toolbar {
+.HeaderToolbar {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -12,18 +12,18 @@
     height: 100%;
 }
 
-.shopping-cart {
+.HeaderToolbar-shopping-cart {
     align-self: center;
     height: 80%;
     padding-right: 10px;
 }
 
-.shopping-cart-svg {
+.HeaderToolbar-shopping-cart-svg {
     height: 100%;
     width: auto;
 }
 
-.header-title {
+.HeaderToolbar-title {
     flex-basis: 15%;
     color: white;
     text-align: center;

@@ -1,14 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import * as serviceWorker from './serviceWorker';
-//import 'bootstrap/dist/css/boostrap.min.css';
-//import $ from 'jquery';
-//import Popper from 'popper.js';
-
-import App from './App';
 import store from './redux/store';
-
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 import './index.scss';
 
 ReactDOM.render(

@@ -1,13 +1,6 @@
 @import '~variables.scss';
 
-.empty-cart-message {
-    font-weight: bold;
-    font-size: 150%;
-    flex-basis: 40%;
-    text-align: center;
-}
-
-.empty-cart {
+.ShoppingCartEmpty {
     height: 200px;
     width: 100%;
     display: flex;
@@ -16,7 +9,14 @@
     padding: 20px;
 }
 
-.shopping-button {
+.ShoppingCartEmpty-message {
+    font-weight: bold;
+    font-size: 150%;
+    flex-basis: 40%;
+    text-align: center;
+}
+
+.ShoppingCartEmpty-shopping-button {
     margin: auto;
     flex-basis: 60%;
     width: 80%;

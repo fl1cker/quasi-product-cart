@@ -10,21 +10,21 @@
     border-radius: 6px;
 }
 
-.image-container {
+.CartItem-image-container {
     float: left;
     width: 30%;
     height: 75%;
     padding: 10px;
 }
 
-.image {
+.CartItem-image {
     object-position: 0 0;
     object-fit: cover;
     height: auto;
     width: 100%;
 }
 
-.close-button {
+.CartItem-close-button {
     position: absolute;
     top: -1px;
     right: 6px;
@@ -35,23 +35,23 @@
     cursor: pointer;
 }
 
-.section {
+.CartItem-section {
     margin: 5.5px 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.price,
-.quantity {
+.CartItem-price,
+.CartItem-quantity {
     font-weight: bold;
 }
 
-.quantity {
+.CartItem-quantity {
     margin-right: 3px;
 }
 
-.specs > *:not(.quantity) {
+.CartItem-specs > *:not(.CartItem-quantity) {
     font-size: .8rem;
     font-weight: 300;
     color: $alternate-text-color;

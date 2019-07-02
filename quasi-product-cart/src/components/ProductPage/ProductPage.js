@@ -64,12 +64,12 @@ const ProductPage = (props) => {
 
     function generateProductList() {
         return listOfProducts.map(product => {
-            return <div key={product.id} className="product-container"><Product product={product} addItemToCart={props.addItemToCart} /></div>
+            return <div key={product.id} className="ProductPage-product-container"><Product product={product} addItemToCart={props.addItemToCart} /></div>
         })
     }
 
     return (
-        <div className="product-body">
+        <div className="ProductPage">
                 {generateProductList()}
         </div>
     )

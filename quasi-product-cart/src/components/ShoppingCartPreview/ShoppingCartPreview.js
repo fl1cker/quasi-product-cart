@@ -15,7 +15,7 @@ const ShoppingCartPreview = (props) => {
 
     return (
         <React.Fragment>
-            <div className="preview-panel" onMouseEnter={props.setShowShoppingCart} onMouseLeave={props.setHideShoppingCart}>
+            <div className="ShoppingCartPreview" onMouseEnter={props.setShowShoppingCart} onMouseLeave={props.setHideShoppingCart}>
                 {render()}
             </div>
         </React.Fragment>
