@@ -5,7 +5,6 @@ const initialState = {
 }
 
 const cartManager = (state = initialState, action) => {
-    console.log(action);
     switch (action.type) {
         case 'ADD_ITEM':
             const newShoppingCartList = addOrUpdateCart(state.shoppingCartList, action.data);
