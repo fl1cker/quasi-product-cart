@@ -1,23 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import Product from '../Product/Product';
-import locallyInitializeProductList from '../../locally-initialize-product-list';
 import './ProductPage.scss';
 
-
-const listOfProducts = locallyInitializeProductList();
-
 const ProductPage = (props) => {
+    const [productList, setProductList] = useState([]);
 
-    function generateProductList() {
-        return listOfProducts.map(product => {
-            return <div key={product.id} className="ProductPage-product-container"><Product product={product} addItemToCart={props.addItemToCart} /></div>
-        })
-    }
+    useEffect(() => {
+        (async function fetchData() {
+            const result = await fetch('http://localhost:3000/products');
+            console.log(result);
+            setProductList(result.data || []);
+        }())
+    })
 
     return (
         <div className="ProductPage">
-                {generateProductList()}
+            {productList.map(product => {
+                return <div key={product.id} className="ProductPage-product-container"><Product product={product} addItemToCart={props.addItemToCart} /></div>
+            })}
         </div>
     )
 }
