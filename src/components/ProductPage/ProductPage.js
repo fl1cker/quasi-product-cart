@@ -4,15 +4,17 @@ import Product from '../Product/Product';
 import './ProductPage.scss';
 
 const ProductPage = (props) => {
+
     const [productList, setProductList] = useState([]);
 
     useEffect(() => {
         (async function fetchData() {
-            const result = await fetch('http://localhost:3000/products');
-            console.log(result);
-            setProductList(result.data || []);
+            const response = await fetch('http://localhost:3001/products');
+            const data = await response.json();
+            setProductList(data);
         }())
-    })
+    }, [])
+
 
     return (
         <div className="ProductPage">
