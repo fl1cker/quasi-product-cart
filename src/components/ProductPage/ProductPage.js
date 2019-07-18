@@ -13,8 +13,22 @@ const ProductPage = (props) => {
             const data = await response.json();
             setProductList(data);
         }())
-    }, [])
+    }, []);
 
+    // const addItemToCart = (product) => {
+    //     (async function addProduct() {
+    //         try {
+    //             //insert new product into API
+
+    //             //refresh cart
+    //             const response = await fetch('http://localhost:3001/cart');
+    //             const updatedCart = await response.json();
+    //             props.refreshCart(updatedCart)
+    //         } catch (ex) {
+
+    //         }
+    //     }())
+    // }
 
     return (
         <div className="ProductPage">
