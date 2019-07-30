@@ -18,7 +18,8 @@ const ProductPage = (props) => {
     function getProducts() {
         return productList.filter(product => {
             const filterText = (props.filterText || '').toLocaleLowerCase();
-            const searchStr = ([product.cost, product.name, product.manufacturer, product.details.join()].join()).toLocaleLowerCase();
+            const formattedCost = `$${product.cost.toFixed(2)}`;
+            const searchStr = ([product.cost, formattedCost, product.name, product.manufacturer, product.details.join()].join()).toLocaleLowerCase();
             return searchStr.includes(filterText)
         }).map(product => {
             return <div key={product.id} className="ProductPage-product-container"><Product product={product} addItemToCart={props.addItemToCart} /></div>
