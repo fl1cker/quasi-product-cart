@@ -15,28 +15,27 @@ const ProductPage = (props) => {
         }())
     }, []);
 
-    // const addItemToCart = (product) => {
-    //     (async function addProduct() {
-    //         try {
-    //             //insert new product into API
-
-    //             //refresh cart
-    //             const response = await fetch('http://localhost:3001/cart');
-    //             const updatedCart = await response.json();
-    //             props.refreshCart(updatedCart)
-    //         } catch (ex) {
-
-    //         }
-    //     }())
-    // }
+    function getProducts() {
+        return productList.filter(product => {
+            const filterText = (props.filterText || '').toLocaleLowerCase();
+            const searchStr = ([product.cost, product.name, product.manufacturer, product.details.join()].join()).toLocaleLowerCase();
+            return searchStr.includes(filterText)
+        }).map(product => {
+            return <div key={product.id} className="ProductPage-product-container"><Product product={product} addItemToCart={props.addItemToCart} /></div>
+        })
+    }
 
     return (
         <div className="ProductPage">
-            {productList.map(product => {
-                return <div key={product.id} className="ProductPage-product-container"><Product product={product} addItemToCart={props.addItemToCart} /></div>
-            })}
+            {getProducts()}
         </div>
     )
+}
+
+function mapStateToProps(state) {
+    return {
+        filterText: state.filterText,
+    }
 }
 
 function mapDispatchToProps(dispatch) {
@@ -45,4 +44,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(null, mapDispatchToProps)(ProductPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductPage);

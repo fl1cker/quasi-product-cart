@@ -2,9 +2,10 @@ const initialState = {
     shoppingCartList: [],
     iconHover: false,
     shoppingCartHover: false,
+    filterText: '',
 }
 
-const cartManager = (state = initialState, action) => {
+const cartReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_ITEM':
             const newShoppingCartList = addOrUpdateCart(state.shoppingCartList, action.data);
@@ -30,6 +31,12 @@ const cartManager = (state = initialState, action) => {
                 shoppingCartHover: action.data,
             }
 
+        case 'UPDATE_FILTER_TEXT':
+            return {
+                ...state,
+                filterText: action.data || '',
+            }
+
         default: return state;
     }
 }
@@ -45,4 +52,4 @@ function addOrUpdateCart(shoppingList, product) {
     return newShoppingList;
 }
 
-export default cartManager;
+export default cartReducer;

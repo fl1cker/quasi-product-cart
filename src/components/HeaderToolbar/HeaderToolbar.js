@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './HeaderToolbar.scss';
+import TextFilter from '../TextFilter/TextFilter';
 
 const HeaderToolbar = (props) => {
     let shouldShowShoppingCart = false;
@@ -22,6 +23,9 @@ const HeaderToolbar = (props) => {
         <div className="HeaderToolbar">
             <div className="HeaderToolbar-title">
                 <img src="images/logo/puerile-logo.svg" alt="puerile logo" className="HeaderToolbar-logo-svg"></img>
+            </div>
+            <div className="HeaderToolbar-TextFilter-container">
+                <TextFilter />
             </div>
             <div className="HeaderToolbar-shopping-cart">
                 <img src="images/icons/shopping-cart.svg" alt="shopping cart icon" className="HeaderToolbar-shopping-cart-svg" onMouseEnter={() => showShoppingCartOnDelay()} onMouseOut={() => hideShoppingCart()}></img>
