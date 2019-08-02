@@ -9,9 +9,10 @@ const ProductPage = (props) => {
 
     useEffect(() => {
         (async function fetchData() {
-            const response = await fetch('http://localhost:3001/products');
-            const data = await response.json();
-            setProductList(data);
+            const response = await fetch('https://15dzqlyk7l.execute-api.us-east-1.amazonaws.com/prod/products');
+            const responseJson = await response.json();
+            const inboundProductList = JSON.parse(responseJson.body);
+            setProductList(inboundProductList);
         }())
     }, []);
 
