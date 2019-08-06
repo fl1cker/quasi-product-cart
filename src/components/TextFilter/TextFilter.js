@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Subject } from 'rxjs';
 import { auditTime } from 'rxjs/operators';
 import './TextFilter.scss';
+import { FaSearch } from 'react-icons/fa'
 
 const TextFilter = (props) => {
 
@@ -15,7 +16,13 @@ const TextFilter = (props) => {
 
     return (
         <div className="TextFilter">
+            <select className="TextFilter-category">
+                <option>All</option>
+            </select>
             <input className="TextFilter-text-input" onKeyUp={(event) => textFilterChanged.next(event.target.value)}/>
+            <div className="TextFilter-search-icon-container">
+                <div className="TextFilter-search-icon"><FaSearch /></div>
+            </div>
         </div>
     )
 }
