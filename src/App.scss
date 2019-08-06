@@ -12,14 +12,13 @@ $filter-panel-width: 225px;
 .App-HeaderToolbar-container {
   height: $header-height;
   width: 100%;
-  position: sticky;
-  top: 0;
-  left: 0;
+  box-shadow: 0 3px 3px rgba(100,100,100,0.9);
 }
 
 .App-FilterPanel-container {
   min-width: $filter-panel-width;
   max-width: $filter-panel-width;
+  box-shadow: 3px 3px 3px rgba(100,100,100,0.9);
 }
 
 
